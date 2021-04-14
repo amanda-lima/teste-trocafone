@@ -6,7 +6,14 @@
  * @param number averageSpeed
  */
 function fuelSpent(hours, averageSpeed){
-	return 1;
+	const KilometersperLiter = 12;
+
+	const Kilometer = averageSpeed * hours;
+
+	const Liter = Kilometer / KilometersperLiter;
+	const RoundedLiter = Math.ceil(Liter)
+
+	return RoundedLiter;
 }
 
 module.exports = fuelSpent;
