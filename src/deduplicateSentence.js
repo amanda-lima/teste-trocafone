@@ -5,7 +5,26 @@
  * deve retornar "Hello Jack. Hello Ana."
  */
 function deduplicateSentence($inputString){
-	return 'to-do';
+		const arrayOfStrings = $inputString.split(" ");
+
+		console.log(arrayOfStrings)
+		for (i = 0; i < arrayOfStrings.lenght; i++ ) {
+			console.log("dentro do primeiro for")
+			for (j = 1; j < arrayofStrings.lenght; i++) {
+				console.log("dentro do segundo for")
+				if (arrayOfStrings[i] != arrayOfStrings[j]) {
+					console.log("dentro do if")
+					const CleanArray = [i,j]
+					 
+					console.log(CleanArray)
+					return CleanArray
+				}
+			}
+		}
+		
+		console.log("Fora do looping");
+		//return arrayOfStrings
+
 };
 
 module.exports = deduplicateSentence;
