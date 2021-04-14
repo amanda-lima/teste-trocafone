@@ -3,7 +3,14 @@
  * Considere que deve retornar o salário + 15% do total vendido.
  */
 function salaryBonus(salary, totalSale){
-	return 'to-do';
+	const comission = 0.15 * totalSale;
+
+	const BonusSalary = comission + salary;
+
+	const BonusSalaryFixed = BonusSalary.toFixed(2);
+	const BonusSalaryNumber = Number(BonusSalaryFixed);
+
+	return BonusSalaryNumber
 };
 
 module.exports = salaryBonus;
